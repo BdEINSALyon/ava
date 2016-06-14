@@ -24,3 +24,21 @@ puts 'Created Study Years'
 end
 
 puts 'Created Departments'
+
+[
+    {code:'A',price:95},
+    {code:'B',price:20},
+    {code:'K',price:17},
+].each do |mode|
+  Membership.find_or_create_by! name:"VA#{DateTime.now.year}#{mode[:code]}", price: mode[:price] do |t|
+    t.active = true
+  end
+end
+
+Membership.all.each do |m|
+  m.excluded_memberships << Membership.all
+  m.excluded_memberships.delete m
+  m.save
+end
+
+puts 'Created Memberships'
