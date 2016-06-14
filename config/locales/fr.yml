@@ -2,4 +2,16 @@ fr:
   ava:
     welcome: "Bienvenue sur AVA"
     welcome_text: "Cette application permet à une association étudiante de gérer ses adhésions. Pour y acceder, merci de vous connecter."
+    members:
+      list_of_members: "Liste des adhérents"
   log_me: "Me connecter"
+  activerecord:
+    attributes:
+      member:
+        student_card: "N°Etudiant"
+        name: "Nom"
+        first_name: "Prénom"
+        email: "Email"
+  show: "Détails"
+  edit: "Modifier"
+  destroy: "Supprimer"

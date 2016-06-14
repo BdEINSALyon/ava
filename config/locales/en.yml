@@ -24,4 +24,16 @@ en:
   ava:
     welcome: "Welcome on AVA"
     welcome_text: "This application is designed to help student union to manage memberships. You should log you to access to the app."
+    members:
+      list_of_members: "List of members"
   log_me: "Log me"
+  activerecord:
+    attributes:
+      member:
+        student_card: "Sudent ID"
+        name: "Last name"
+        first_name: "First name"
+        email: "Email"
+  show: "Show"
+  edit: "Edit"
+  destroy: "Destroy"

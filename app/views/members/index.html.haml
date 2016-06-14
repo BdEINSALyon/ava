@@ -1,8 +1,12 @@
-%h1 Listing members
+%h1=t('ava.members.list_of_members')
 
-%table
+%table.table.table-striped
   %thead
     %tr
+      %th=t('activerecord.attributes.member.student_card')
+      %th=t('activerecord.attributes.member.name')
+      %th=t('activerecord.attributes.member.first_name')
+      %th=t('activerecord.attributes.member.email')
       %th
       %th
       %th
@@ -10,9 +14,13 @@
   %tbody
     - @members.each do |member|
       %tr
-        %td= link_to 'Show', member
-        %td= link_to 'Edit', edit_member_path(member)
-        %td= link_to 'Destroy', member, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= member.student_card
+        %td= member.name
+        %td= member.first_name
+        %td= member.email
+        %td= link_to t('show'), member
+        %td= link_to t('edit'), edit_member_path(member)
+        %td= link_to t('destroy'), member, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
