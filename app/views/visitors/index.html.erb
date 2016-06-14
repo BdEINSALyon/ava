@@ -3,12 +3,9 @@
 
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>A Bootstrap Starter Template</h1>
-            <p class="lead">A Bootstrap HTML starter template from <a href="http://startbootstrap.com/">startbootstrap.com</a>.</p>
-            <ul class="list-unstyled">
-                <li>Bootstrap</li>
-                <li>jQuery</li>
-            </ul>
+            <h1><%= t('ava.welcome') %></h1>
+            <p class=""><%= t('ava.welcome_text') %></p>
+            <%= link_to t('log_me'), new_user_session_path, class: %w(btn btn-primary btn-lg) %>
         </div>
     </div>
     <!-- /.row -->

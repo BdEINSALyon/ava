@@ -1,1 +1,5 @@
 fr:
+  ava:
+    welcome: "Bienvenue sur AVA"
+    welcome_text: "Cette application permet à une association étudiante de gérer ses adhésions. Pour y acceder, merci de vous connecter."
+  log_me: "Me connecter"

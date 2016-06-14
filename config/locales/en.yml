@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  ava:
+    welcome: "Welcome on AVA"
+    welcome_text: "This application is designed to help student union to manage memberships. You should log you to access to the app."
+  log_me: "Log me"
