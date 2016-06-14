@@ -3,22 +3,14 @@ Ava
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+This application is designed to manage memberships for a student union.
 
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
+The App contains a list of all members with respective memberships and rights. An API is availaible to explore data and
+use it in another app.
 
-Problems? Issues?
------------
+This App is a currently a work in progress and should be a partial port of Adhesion the previous used app.
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
-
-Ruby on Rails
+For Developers
 -------------
 
 This application requires:
@@ -30,21 +22,30 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 
 Getting Started
 ---------------
+To run this app, please first install a PostGres server with peer authentification and admin rights.
+
+Run the following commands:
+
+```bash
+bundle install
+rake db:create
+rake db:migrate
+rake db:seed
+rails server start
+```
+
+All should be successful.
 
 Documentation and Support
 -------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
+No documentation is availaible for that time, but you can contribute on the Wiki
 
 Credits
 -------
+&copy; 2016 Philippe VIENNE
 
 License
 -------
+[![GNU GPL v3.0](http://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl.html)
+
+View official GNU site <http://www.gnu.org/licenses/gpl.html>.
