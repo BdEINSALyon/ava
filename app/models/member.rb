@@ -8,8 +8,12 @@ class Member < ActiveRecord::Base
 
   validates_presence_of :name, :first_name
   validates :email, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}, presence: true
-  validates_uniqueness_of :student_card
+  validates_uniqueness_of :student_card, if: :has_student_card?
   validates_uniqueness_of :phone
   validates_inclusion_of :gender, in: %w{M W}
+
+  def has_student_card?
+    not (student_card.nil? or student_card.empty?)
+  end
 
 end
