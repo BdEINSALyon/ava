@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :users
     resources :study_years
     resources :departments
+    resources :memberships
     root to: 'users#index'
   end
 
