@@ -2,14 +2,18 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
-    = f.input :first_name
-    = f.input :email
-    = f.input :phone
-    = f.input :birthday
-    = f.input :student_card
-    = f.input :study_year
-    = f.input :department
+    .row
+      .col-md-6= f.input :name
+      .col-md-6= f.input :first_name
+    .row
+      .col-md-6= f.input :email
+      .col-md-6= f.input :phone
+    .row
+      .col-md-6= f.input :birthday
+      .col-md-6= f.input :student_card
+    .row
+      .col-md-6= f.association :study_year
+      .col-md-6= f.association :department
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, value: 'OK', class: %w(btn-primary btn-block)
