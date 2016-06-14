@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160614213833) do
+ActiveRecord::Schema.define(version: 20160614215502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,9 +36,43 @@ ActiveRecord::Schema.define(version: 20160614213833) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "memberships", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.decimal  "price"
+    t.boolean  "active"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "memberships_exclusions", force: :cascade do |t|
+    t.integer "membership_id"
+    t.integer "excluded_membership_id"
+  end
+
+  add_index "memberships_exclusions", ["excluded_membership_id"], name: "index_memberships_exclusions_on_excluded_membership_id", using: :btree
+  add_index "memberships_exclusions", ["membership_id"], name: "index_memberships_exclusions_on_membership_id", using: :btree
+
+  create_table "memberships_subscriptions", id: false, force: :cascade do |t|
+    t.integer "subscription_id", null: false
+    t.integer "membership_id",   null: false
+  end
+
+  add_index "memberships_subscriptions", ["membership_id", "subscription_id"], name: "ms_index", using: :btree
+  add_index "memberships_subscriptions", ["membership_id"], name: "index_memberships_subscriptions_on_membership_id", using: :btree
+  add_index "memberships_subscriptions", ["subscription_id", "membership_id"], name: "sm_index", using: :btree
+  add_index "memberships_subscriptions", ["subscription_id"], name: "index_memberships_subscriptions_on_subscription_id", using: :btree
+
   create_table "study_years", force: :cascade do |t|
     t.integer  "year"
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer  "member_id"
+    t.string   "method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
