@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
   devise_for :users
   resources :members do
-    resources :subscriptions, except: [:index]
+    resources :subscriptions, except: [:index, :show]
   end
 end

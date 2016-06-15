@@ -5,6 +5,14 @@ fr:
     members:
       list_of_members: "Liste des adhérents"
       no_memberships: "Aucune adhésion pour cet adhérent"
+    subscriptions:
+      edit: "Editer une adhesion"
+      register_new: "Enregistrer une nouvelle adhesion"
+    money:
+      mean:
+        ESP: "Espèce"
+        EMV: "CB"
+        CHQ: "Chèque"
   log_me: "Me connecter"
   activerecord:
     attributes:

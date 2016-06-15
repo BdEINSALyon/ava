@@ -1,0 +1,10 @@
+= simple_form_for([@subscription.member, @subscription]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .row
+      .col-md-6= f.input :method, collection: [[t('ava.money.mean.ESP'),'ESP'],[t('ava.money.mean.EMV'),'EMV'],[t('ava.money.mean.CHQ'),'CHQ']]
+      .col-md-6= f.association :memberships, as: :check_boxes
+
+  .form-actions
+    = f.button :submit, value: 'OK', class: %w(btn-primary btn-block)

@@ -27,6 +27,14 @@ en:
     members:
       list_of_members: "List of members"
       no_memberships: "No memberships for that member"
+    subscriptions:
+      edit: "Edit a subscription"
+      register_new: "Register new subscription"
+    money:
+      mean:
+        ESP: "Cash"
+        EMV: "Credit Card"
+        CHQ: "Cheque"
   log_me: "Log me"
   activerecord:
     attributes:

@@ -1,2 +1,7 @@
-%h1 Subscriptions#edit
-%p Find me in app/views/subscriptions/edit.html.haml
+%h1=t('ava.subscriptions.edit')
+
+= render 'form'
+
+= link_to 'Show', @member
+\|
+= link_to 'Back', members_path
