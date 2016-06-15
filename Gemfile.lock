@@ -316,7 +316,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
-  omniauth
   omniauth-azure-oauth2
   pg
   quiet_assets
