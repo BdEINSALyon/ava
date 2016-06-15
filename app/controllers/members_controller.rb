@@ -1,4 +1,8 @@
 class MembersController < ApplicationController
+
+  # noinspection RailsParamDefResolve
+  before_action :authenticate_user!
+
   before_action :set_member, only: [:show, :edit, :update, :destroy]
 
   # GET /members
@@ -62,12 +66,12 @@ class MembersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+  # Use callbacks to share common setup or constraints between actions.
     def set_member
       @member = Member.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
       params.fetch(:member, [:name, :first_name, :email, :department_id, :study_year_id, :gender, :phone, :student_card])
     end
