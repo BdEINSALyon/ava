@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   root to: 'visitors#index'
   devise_for :users
-  resources :members
+  resources :members do
+    resources :subscriptions, except: [:index]
+  end
 end
