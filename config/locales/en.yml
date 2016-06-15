@@ -26,6 +26,7 @@ en:
     welcome_text: "This application is designed to help student union to manage memberships. You should log you to access to the app."
     members:
       list_of_members: "List of members"
+      no_memberships: "No memberships for that member"
   log_me: "Log me"
   activerecord:
     attributes:
@@ -37,6 +38,7 @@ en:
         department: "Department"
         study_year: "Studying Year"
         phone: "Phone"
+        memberships: "Memberships"
   show: "Show"
   edit: "Edit"
   destroy: "Destroy"

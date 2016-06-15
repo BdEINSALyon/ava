@@ -4,6 +4,7 @@ fr:
     welcome_text: "Cette application permet à une association étudiante de gérer ses adhésions. Pour y acceder, merci de vous connecter."
     members:
       list_of_members: "Liste des adhérents"
+      no_memberships: "Aucune adhésion pour cet adhérent"
   log_me: "Me connecter"
   activerecord:
     attributes:
@@ -15,6 +16,7 @@ fr:
         department: "Département"
         study_year: "Année d'étude"
         phone: "Téléphone"
+        memberships: "Adhésions"
   show: "Détails"
   edit: "Modifier"
   destroy: "Supprimer"
