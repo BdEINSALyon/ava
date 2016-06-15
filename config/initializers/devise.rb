@@ -1,3 +1,4 @@
+require 'omniauth-azure-oauth2'
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -242,7 +243,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   config.omniauth :azure_oauth2, client_id: ENV['AZURE_CLIENT_ID'],
-                  client_secret: ENV['AZURE_CLIENT_SECRET'], tenant_id: ENV['AZURE_TENANT_ID']
+                  client_secret: ENV['AZURE_CLIENT_SECRET'], tenant_id: ENV['AZURE_TENANT_ID'],
+                  resource: 'https://graph.microsoft.com'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

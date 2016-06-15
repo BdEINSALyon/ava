@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   root to: 'visitors#index'
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :members do
     resources :subscriptions, except: [:index, :show]
   end
