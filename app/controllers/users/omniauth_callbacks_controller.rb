@@ -1,7 +1,6 @@
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def azure_oauth2
-    # You need to implement the method below in your model (e.g. app/models/user.rb)
 
     @user = User.find_by_email request.env['omniauth.auth']['info']['email']
 
@@ -31,16 +30,17 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # Check if he is member of authorized groups
     # TODO: Write code for that
 
-    if @user.persisted?
+    if not @user.nil? and @user.persisted?
       sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated
       set_flash_message(:notice, :success, :kind => 'Office 365') if is_navigational_format?
     else
-      set_flash_message(:notice, :failure, :kind => 'Office 365') if is_navigational_format?
+      set_flash_message(:error, :failure, :kind => 'Office 365', reason: I18n.t('ava.account.no_access')) if is_navigational_format?
       redirect_to root_path
     end
   end
 
   def failure
+    set_flash_message(:notice, :failure, :kind => 'Office 365') if is_navigational_format?
     redirect_to root_path
   end
 end

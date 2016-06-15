@@ -14,6 +14,8 @@ fr:
         ESP: "Espèce"
         EMV: "CB"
         CHQ: "Chèque"
+    account:
+      no_access: "Vous n'avez pas accès à cette application"
   log_me: "Me connecter"
   activerecord:
     attributes:

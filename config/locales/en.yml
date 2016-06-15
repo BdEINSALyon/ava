@@ -36,6 +36,8 @@ en:
         ESP: "Cash"
         EMV: "Credit Card"
         CHQ: "Cheque"
+    account:
+      no_access: "You don't have access to this application"
   log_me: "Log me"
   activerecord:
     attributes:
