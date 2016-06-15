@@ -27,14 +27,17 @@
         %label.control-label.col-sm-4=t('activerecord.attributes.member.memberships')
         .col-sm-8
           .form-control-static
-            %ul.pull-left
-              - @member.memberships.each do |m|
-                %li= m.name
+            %ul
+              - @member.subscriptions.each do |m|
+                %li
+                  = m.name
+                  .pull-right
+                    = link_to member_subscription_path(member_id:@member.id), class: %w{btn btn-success} do
+                      %i.glyphicon.glyphicon-plus-sign
               - if @member.memberships.empty?
                 %li.text-muted=t('ava.members.no_memberships')
-            .pull-right
-              = link_to new_member_subscription_path(member_id:@member.id), class: %w{btn btn-success} do
-                %i.glyphicon.glyphicon-plus-sign
+            = link_to new_member_subscription_path(member_id:@member.id), class: %w{btn btn-success} do
+              %i.glyphicon.glyphicon-plus-sign
 
 .row
   .col-sm-4.col-sm-offset-1= link_to 'Back', members_path, class: %w{btn btn-default btn-block}
