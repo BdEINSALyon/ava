@@ -4,7 +4,7 @@
   .form-inputs
     .row
       .col-md-6= f.input :method, collection: [[t('ava.money.mean.ESP'),'ESP'],[t('ava.money.mean.EMV'),'EMV'],[t('ava.money.mean.CHQ'),'CHQ']]
-      .col-md-6= f.association :memberships, as: :check_boxes
+      .col-md-6= f.association :membership, as: :radio_buttons
 
   .form-actions
     = f.button :submit, value: 'OK', class: %w(btn-primary btn-block)

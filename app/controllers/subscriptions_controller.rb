@@ -36,6 +36,6 @@ class SubscriptionsController < ApplicationController
   private
 
   def subscription_params
-    params.fetch('subscription',[]).permit(:method, :membership_ids=>[])
+    params.fetch('subscription',[]).permit(:method, :membership_id)
   end
 end

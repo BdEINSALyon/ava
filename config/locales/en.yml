@@ -30,6 +30,7 @@ en:
     subscriptions:
       edit: "Edit a subscription"
       register_new: "Register new subscription"
+      delete_confirmation: "Are you sure you want to remove that membership"
     money:
       mean:
         ESP: "Cash"
@@ -52,3 +53,4 @@ en:
   destroy: "Destroy"
   not_filled: "Not filled"
   other: "Other"
+  add: "Add"

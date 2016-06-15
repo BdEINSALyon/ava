@@ -8,6 +8,7 @@ fr:
     subscriptions:
       edit: "Editer une adhesion"
       register_new: "Enregistrer une nouvelle adhesion"
+      delete_confirmation: "Voulez-vous vraiement supprimer cette adhesion ?"
     money:
       mean:
         ESP: "Espèce"
@@ -30,3 +31,4 @@ fr:
   destroy: "Supprimer"
   not_filled: "Non renseigné"
   other: "Autre"
+  add: "Ajouter"
