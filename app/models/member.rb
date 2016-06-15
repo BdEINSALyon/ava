@@ -6,6 +6,9 @@ class Member < ActiveRecord::Base
   has_many :memberships, through: :subscriptions, class_name: 'Membership'
   has_many :excluded_memberships, through: :memberships, class_name: 'Membership'
 
+  accepts_nested_attributes_for :department
+  accepts_nested_attributes_for :study_year
+
   validates_presence_of :name, :first_name
   validates :email, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}, presence: true
   validates_uniqueness_of :student_card, if: :has_student_card?
