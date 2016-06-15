@@ -1,6 +1,27 @@
-%p#notice= notice
+%h2="#{@member.name.upcase} #{@member.first_name}"
+
+.form-horizontal
+  .form-group
+    %label.control-label.col-sm-2=t('activerecord.attributes.member.email')
+    .col-sm-10
+      %p.form-control-static= @member.email
+  .form-group
+    %label.control-label.col-sm-2=t('activerecord.attributes.member.phone')
+    .col-sm-10
+      %p.form-control-static= @member.phone
+  .row
+    .col-sm-6
+      .form-group
+        %label.control-label.col-sm-4=t('activerecord.attributes.member.department')
+        .col-sm-8
+          %p.form-control-static= display_department @member.department
+    .col-sm-6
+      .form-group
+        %label.control-label.col-sm-4=t('activerecord.attributes.member.study_year')
+        .col-sm-8
+          %p.form-control-static= display_study_year @member.study_year
 
 
-= link_to 'Edit', edit_member_path(@member)
-\|
-= link_to 'Back', members_path
+.row
+  .col-sm-4.col-sm-offset-1= link_to 'Back', members_path, class: %w{btn btn-default btn-block}
+  .col-sm-4.col-sm-offset-2= link_to 'Edit', edit_member_path(@member), class: %w{btn btn-primary btn-block}
