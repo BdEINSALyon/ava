@@ -33,7 +33,7 @@
               - if @member.memberships.empty?
                 %li.text-muted=t('ava.members.no_memberships')
             .pull-right
-              = link_to new_member_subscription_path, class: %w{btn btn-success} do
+              = link_to new_member_subscription_path(member_id:@member.id), class: %w{btn btn-success} do
                 %i.glyphicon.glyphicon-plus-sign
 
 .row
